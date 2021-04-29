@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>목록태그</title>
+    </head>
+    <body>
+        <h1>목록 태그</h1>
+        <h2>순서 없는 목록</h2>
+        <h3>내가 좋아하는 음식</h3>
+        <ul type="square">
+            <li>짜장면</li>
+            <li>짬뽕</li>
+            <li>해물탕</li>
+            <li>아이스크림</li>
+            <li>잡채</li>
+        </ul>
+        <ul type="circle">
+            <li>짜장면</li>
+            <li>짬뽕</li>
+            <li>해물탕</li>
+            <li>아이스크림</li>
+            <li>잡채</li>
+        </ul>
+        <ul>
+            <li>분식
+                <ul>
+                    <li>떡볶이</li>
+                    <li>어묵</li>
+                    <li>라면</li>
+                        <ul>
+                            <li>떡라면</li>
+                            <li>해물라면</li>
+                        </ul>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <h2>순서 있는 목록</h2>
+        <h3>내가 좋아하는 음식 best3</h3>
+            <ol type='a'>
+                <li>짜장면</li>
+                <li>우동</li>
+                <li>짬뽕</li>
+            </ol>
+            <ol type='I'>
+                <li>짜장면</li>
+                <li>우동</li>
+                <li>짬뽕</li>
+            </ol>
+            <ol type='i'>
+                <li>짜장면</li>
+                <li>우동</li>
+                <li>짬뽕</li>
+            </ol>
+        <ol>
+            <li>분식
+                <ol type='a'>
+                    <li>떡볶이</li>
+                    <li>어묵</li>
+                    <li>라면</li>
+                        <ol>
+                            <li>떡라면</li>
+                            <li>해물라면</li>
+                        </ol>
+                </ol>
+            </li>
+        </ol>
+
+<!--
+목록 다루기
+리스트 : 여러 요소들을 일렬로 나열한 목록이나 명단을 의미
+HTML에서는 ul, ol, dl이라는 태그로 표현 가능.
+
+또한 웹 페이지 내 메뉴를 정의할 때나 상품 목록 표시에 유용.
+
+정의 목록
+용어와 그 용어의 뜻을 나열할 때 사용함.
+정의목록은 dl태그로, 용어는 dt태그롤, 용어 뜻은 dd태그를 사용함.
+-->
+
+        <hr>
+        <h2>정의 목록</h2>
+        <dl>
+            <dt>WWW</dt>
+            <dd>WWW는 world wide web의 약자로서...</dd>
+            <dt>HTML</dt>
+            <dd>HTML은 hypertext markup language의 약자로...</dd>
+            <dt>CSS</dt>
+            <dd>CSS는 cascade style sheet의 약자로...</dd>
+        </dl>
+
+    </body>
+</html>
