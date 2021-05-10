@@ -1,224 +1,162 @@
 <!doctype html>
-
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>실습 예제</title>
+        <title>회원가입</title>
     </head>
     <body>
-
-        <h1>회원 가입</h1>
+        <h1>회원가입</h1>
 
         <form name="joinfrm" method="post">
+        <p><span style="color:red">*</span>
+           표시항목은 필수 입력항목입니다.</p>
+        <table cellpadding="10" cellspacing="0">
+            <tr><td style="background: gainsboro; width:150px; text-align: right">
+                아 이 디</td>
+                <td><span style="color:red">*</span>
+                    <input type="text" name="userid" size="12">
+                    <button type="button">ID중복검사</button><br>
+                    <span>&nbsp;&nbsp;아이디는 영문,숫자 조합으로 하셔야 합니다.
+                    [4자리이상 12자리이하]<br>
+                    &nbsp;&nbsp;아이디는 <span style="color:red">소문자</span>
+                    로 저장됩니다</span>
+                </td></tr>
 
-        <p><span style="color: red">*</span> 표시 항목은 필수 입력 항목입니다.</p>
-
-<!--                <table border="0" cellpadding=10 cellspacing=0>-->
-        <table border="0" cellpadding=10>
-            <!---------------------- 아이디 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle>아 이 디</td>
-            <td valign=top><font color='red'>*</font></td>
-            <td valign=middle>
-                <input type="text" name="uid" size="10">
-                <button type="submit">중복 검사</button><br>
-                <font size='2'>
-                아이디는 영문, 숫자 조합으로 하셔야 합니다. (4~12자리)<br>
-                    아이디는 <font color='red'>소문자</font>로 저장합니다.</font>
-            </td>
-            </tr>
-
-            <!---------------------- 암호 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>암&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;호</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="password" name="pwd" size="10"> <br>
-                <span><font size='2'>비밀번호는 4자리 이상 2자리 이하로 해주세요.</font></span>
-            </td>
-            </tr>
-
-            <!---------------------- 암호 확인 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>암호확인</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="password" name="chkpwd" size="10"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 이름 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="name" size="10"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 대화명 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle>대 화 명</td>
-            <td valign=top><font color='red'></font></td>
-            <td valign=middle>
-                <input type="text" name="nickname" size="10">
-                <button type="submit">중복 검사</button><br>
-                <span>대화명을 지정하지 않으면 회원님의 이름으로 대화명이 지정됩니다.<br>대화명은 한글, 영문 관계없이 10글자 이내로 하셔야 합니다. </span></td>
-            </tr>
-
-            <!---------------------- 주민등록번호 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>주민등록번호</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="jumin1" size="6"> -
-                <input type="text" name="jumin2" size="7"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 생년월일 입력 --------------->
-            <tr>
-                <td style="background: gainsboro" align=center valign=middle width=100>생년월일</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="birth_year" size="4"> 년
-                <input type="text" name="birth_month" size="2"> 월
-                <input type="text" name="birth_day" size="2"> 일
-
-            </td>
-            </tr>
-
-            <!---------------------- 성별 입력 --------------->
-            <tr>
-                <td style="background: gainsboro" align=center valign=middle width=100>성별</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="radio" name="sex"> 남자
-                <input type="radio" name="sex"> 여자
-
-            </td>
-            </tr>
-
-            <!---------------------- E-mail 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>E-mail</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="email" size="30"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 메일수신 동의 --------------->
-            <tr>
-                <td style="background: gainsboro" align=center valign=middle width=100>메일 수신</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="radio" name="mailok"> 수신동의
-                <input type="radio" name="mailok"> 수신거부
-
-            </td>
-            </tr>
-
-            <!---------------------- 우편번호 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>우편번호</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="zipcode1" size="3"> -
-                <input type="text" name="zipcode2" size="3">
-                <button type="submit">조회</button><br>
-            </td>
-            </tr>
-
-            <!---------------------- 주소 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>주소</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type="text" name="zipcode1" size="30"> <br>
-                <input type="text" name="zipcode2" size="20">
-            </td>
-            </tr>
-
-            <!---------------------- 전화번호 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>전화번호</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <select name = "tel1">
-                    <option>02</option>
-                    <option>031</option>
-                </select>
-                <input type="text" name="tel2" size="4"> -
-                <input type="text" name="tel3" size="4"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 휴대폰 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>휴대폰</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <select name = "phone1">
-                    <option>010</option>
-                    <option>011</option>
-                </select>
-                <input type="text" name="phone2" size="4"> -
-                <input type="text" name="phone3" size="4"> <br>
-            </td>
-            </tr>
-
-            <!---------------------- 직업 입력 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle width=100>직업</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <select name = "job">
-                    <option>선택하세요</option>
-                    <option>회사원</option>
-                    <option>학생</option>
-                    <option>자영업</option>
-                </select>
-            </td>
-            </tr>
-
-            <!---------------------- 취미 --------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle>취미</td>
-            <td><font color='red' valign=top>*</font></td>
-            <td valign=middle>
-                <input type = checkbox name = hobby value=1>스포츠
-                <input type = checkbox name = hobby value=2>독서
-                <input type = checkbox name = hobby value=3>여행
+            <tr><td style="background: gainsboro; width:150px; text-align: right">암 &nbsp;&nbsp;&nbsp; 호</td>
+            <td><span style="color:red">*</span>
+                <input type="password" name="passwd" size="12"><br>
+                <span>&nbsp;&nbsp;비밀번호는 4자리이상 12자리이하로 입력해주세요</span>
                 </td>
             </tr>
 
-            <!---------------------- 자기소개 ------------------->
-            <tr>
-            <td style="background: gainsboro" align=center valign=middle>자기소개</td>
-            <td><font color='red' valign=top></font></td>
-            <td valign=middle>
-                <textarea name=intro cols=75 rows=5>
-                </textarea>
+            <tr><td style="background: gainsboro; width:150px; text-align: right">암호학인</td>
+            <td><span style="color:red">*</span>
+                <input type="password" name="chkpwd" size="12"></td>
             </tr>
 
-            <!---------------------- 전송 버튼 ------------------->
-            <tr>
-            <td colspan=3>
+            <tr><td style="background: gainsboro; width:150px; text-align: right">이 &nbsp;&nbsp;&nbsp; 름</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="name" size="12"></td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">대&nbsp;화&nbsp;명</td>
+            <td>&nbsp;
+                <input type="text" name="nickname" size="12">
+                <button type="button">중복검사</button><br>
+                <span>&nbsp;&nbsp;대화명을 지정하지 않으시면 회원임의 이름으로 대화명이 지정됩니다.<br>&nbsp;&nbsp;대화명은 한글,영문 관계없이 10글자 이내로 하셔야 합니다.</span></td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">주민등록번호</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="jumin1" size="6"> -
+                <input type="text" name="jumin2" size="6">
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">생년월일</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="jumin1" size="2">년
+                <input type="text" name="jumin2" size="1">월
+                <input type="text" name="jumin2" size="1">일
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">성 &nbsp;&nbsp;&nbsp; 별</td>
+            <td><span style="color:red">*</span>
+                <input type="radio" name="gender" value="m">남자
+                &nbsp;&nbsp;
+                <input type="radio" name="gender" value="f">여자
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">E - mail</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="email" size="25">
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">메일수신</td>
+            <td><span style="color:red">*</span>
+                <input type="radio" name="agree" value="y" checked>수신동의
+                &nbsp;&nbsp;
+                <input type="radio" name="agree" value="n">수신거부
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">우편번호</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="zip1" size="1"> -
+                <input type="text" name="zip2" size="1">
+                <button type="button">검색</button></td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">주 &nbsp;&nbsp;&nbsp; 소</td>
+            <td><span style="color:red">*</span>
+                <input type="text" name="addr1" size="25"><br>
+                &nbsp;&nbsp;<input type="text" name="addr2" size="15">
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">전화번호</td>
+            <td><span style="color:red">*</span>
+                <select name="tel1">
+                    <option>02</option><option>051</option>
+                    <option>031</option><option>032</option>
+                </select> -
+                <input type="text" name="tel2" size="3"> -
+                <input type="text" name="tel3" size="3">
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">핸&nbsp;드&nbsp;폰</td>
+            <td><span style="color:red">*</span>
+                <select name="hp1">
+                    <option>010</option><option>011</option>
+                    <option>016</option><option>018</option>
+                </select> -
+                <input type="text" name="hp2" size="3"> -
+                <input type="text" name="hp3" size="3">
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">직 &nbsp; &nbsp; 업</td>
+            <td>&nbsp;
+                <select name="job">
+                    <option>선택하세요</option>
+                    <option>회사원</option>
+                    <option>학생</option>
+                    <option>개발자</option>
+                </select>
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">취 &nbsp; &nbsp; 미</td>
+            <td><span style="color:red">*</span>
+                <input type="checkbox" name="hobby" value="sports">스포츠&nbsp;
+                <input type="checkbox" name="hobby" value="shopping">쇼핑&nbsp;
+                <input type="checkbox" name="hobby" value="internet">인터넷&nbsp;
+                <input type="checkbox" name="hobby" value="trips">여행&nbsp;
+                <input type="checkbox" name="hobby" value="books">독서&nbsp;
+                <input type="checkbox" name="hobby" value="movies">영화감상&nbsp;
+                 <input type="checkbox" name="hobby" value="musics">음악감상&nbsp;
+                </td>
+            </tr>
+
+            <tr><td style="background: gainsboro; width:150px; text-align: right">자기소개</td>
+            <td>&nbsp;
+                <textarea name="intro" cols="75" rows="5"></textarea>
+                </td>
+            </tr>
+
+            <tr><td colspan="2" style="text-align: center">
                 <button type="submit">등록</button>
-                <button type="rest">취소</button></td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="reset">취소</button>
+                </td>
             </tr>
-
-
-
-
 
         </table>
-        </form>
 
+        </form>
     </body>
 </html>
-
-
-<!--
--->
