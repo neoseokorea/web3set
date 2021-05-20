@@ -2,12 +2,15 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <title>이벤트처리</title>
+        <title>이벤트처리34event.html</title>
     </head>
     <body>
+
+---------------------------------1--------------------------------
+
         <h1>이벤트처리</h1>
         <button type="button" onclick="alert('Hello, World!!')"
-            onmouseover="alert('Hello, World, again!!')">
+            onmouseover="alert('마우스만 올려도 반응하죠')">
             눌러보세요!</button>
 
         <button type="button" onclick="sayHello()"
@@ -18,9 +21,11 @@
 
         <button type="button" id="btn4">한번 더, 눌러보세요!</button>
 
+		<div></div>
+
         <script>
-            function sayHello() { alert('Hello, World!!'); }
-            function sayHello2() { alert('Hello, World, again!!'); }
+            function sayHello() { alert('안녕이라는 함수'); }
+            function sayHello2() { alert('다시 안녕이라는 함수'); }
 
             window.onload = function() {
                 let btn3 = document.getElementById('btn3');
@@ -36,6 +41,8 @@
             // window.onload를 사용하지 않고 이벤트 정의 가능
         </script>
 
+---------------------------------2--------------------------------
+
         <h2>성적처리 프로그램</h2>
         <form name="sjfrm">
             <div>이름 : <input type="text" name="name"></div>
@@ -43,7 +50,7 @@
             <div>영어 : <input type="text" name="eng"></div>
             <div>수학 : <input type="text" name="mat"></div>
             <div><button type="button" id="sjbtn">입력완료</button></div>
-            <span id="result"></span>
+            <span id="result"></span> //계산결과가 표시되는 영역
         </form>
 
         <script>
@@ -94,6 +101,8 @@
             }
         </script>
 
+--------------------------------3---------------------------------
+
         <h2>로그인 처리프로그램</h2>
         <form name="loginfrm">
             <div>아이디 : <input type="text" name="userid"></div>
@@ -102,40 +111,42 @@
             <span id="isLogin"></span>
         </form>
         <script>
-            // 아이디, 비밀번호를 미리 설정해두고
-            // 폼을 통해 입력받은 아이디, 비밀번호를 비교해서
-            // 일치하면 '로그인 성공!'이라는
-            // 일치하지 않으면 '로그인 실패!'라는 메세지를 출력
+				// 아이디, 비밀번호를 미리 설정해두고
+				// 폼을 통해 입력받은 아이디, 비밀번호를 비교해서
+				// 일치하면 '로그인 성공!'이라는
+				// 일치하지 않으면 '로그인 실패!'라는 메세지를 출력
 
-            // 폼이름은 loginfrm으로 설정
-            // 아이디/비밀번호 : userid, passwd
-            // 미리 설정해둔 아이디/비밀번호 : myuid=abc123, mypwd=987xyz
+				// 폼이름은 loginfrm으로 설정
+				// 아이디/비밀번호 : userid, passwd
+				// 미리 설정해둔 아이디/비밀번호 : myuid=abc123, mypwd=987xyz
 
             let loginbtn = document.getElementById('loginbtn');
             loginbtn.addEventListener('click', checklogin);
 
-            function checklogin() {
-                let myuid = 'abc123';
-                let mypwd = '987xyz';
-                let userid = document.loginfrm.userid;
-                let passwd = document.loginfrm.passwd;
-                let isLogin = document.getElementById('isLogin');
+			function checklogin() {
+				let myuid = 'abc123';
+				let mypwd = '987xyz';
+				let userid = document.loginfrm.userid;
+				let passwd = document.loginfrm.passwd;
+				let isLogin = document.getElementById('isLogin');
 
-                if (userid.value == '') {
-                    alert('아이디를 입력하세요');
-                    userid.focus();
-                } else if (passwd.value == '') {
-                    alert('비밀번호를 입력하세요');
-                    passwd.focus();
-                } else if (userid.value == myuid &&
-                            passwd.value == mypwd) {
-                    isLogin.innerHTML = '로그인 성공!!';
-                } else {
-                    isLogin.innerHTML = '로그인 실패!';
-                }
-            }
+				if (userid.value == '') {
+					alert('아이디를 입력하세요');
+					userid.focus();
+				} else if (passwd.value == '') {
+					alert('비밀번호를 입력하세요');
+					passwd.focus();
+				} else if (userid.value == myuid &&
+							passwd.value == mypwd) {
+					isLogin.innerHTML = '로그인 성공!!';
+				} else {
+					isLogin.innerHTML = '로그인 실패!';
+				}
+			}
 
         </script>
+
+--------------------------------4---------------------------------
 
         <h2>회원가입시 아이디 중복체크</h2>
         <form name="joinfrm">
